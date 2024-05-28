@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main" class="page">
+        <div class="header">
+            <div id="xp" class="widget">XP: 0</div>
+            <div id="money" class="widget">$0</div>
+        </div>
+        <div class="background">
+            <img src="5.jpg" alt="Background">
+            <div class="character" onclick="handleTap()">
+                <img src="1.png" alt="Character">
+            </div>
+        </div>
+    </div>
+
+    <div id="make" class="page hidden">
+        <div class="header">
+            <div id="earnings" class="widget">Earnings: $0</div>
+        </div>
+        <div class="sliders">
+            <label>
+                MACD
+                <input type="checkbox" id="macd" onchange="updateEarnings()">
+            </label>
+            <label>
+                RSI
+                <input type="checkbox" id="rsi" onchange="updateEarnings()">
+            </label>
+        </div>
+        <div id="loadingBar" class="loading-bar"></div>
+    </div>
+
+    <div id="work" class="page hidden">
+        <button class="green-button" onclick="showAlert()">Green</button>
+        <button class="red-button" onclick="showAlert()">Red</button>
+    </div>
+
+    <div id="task" class="page hidden">
+        <h2>Tasks</h2>
+        <div class="task">
+            <a href="https://t.me/channel1" target="_blank">Channel 1</a>
+            <div class="reward">10000 YOUNG</div>
+        </div>
+        <div class="task">
+            <a href="https://t.me/channel2" target="_blank">Channel 2</a>
+            <div class="reward">10000 YOUNG</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
