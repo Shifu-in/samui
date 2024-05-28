@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let xp = 0;
-    const xpWidget = document.getElementById("xp-widget");
+    const xpText = document.getElementById("xp-text");
     const character = document.getElementById("character");
 
     character.addEventListener("click", (event) => {
@@ -10,14 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function updateXpWidget(xp) {
-        const xpText = xpWidget.querySelector("span");
-        if (xpText) {
-            xpText.textContent = xp;
-        } else {
-            const newText = document.createElement("span");
-            newText.textContent = xp;
-            xpWidget.appendChild(newText);
-        }
+        xpText.textContent = xp;
     }
 
     function showXpPopup(x, y) {
