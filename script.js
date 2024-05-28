@@ -5,9 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     character.addEventListener("click", (event) => {
         xp += 1;
-        xpWidget.textContent = `XP: ${xp}`;
+        updateXpWidget(xp);
         showXpPopup(event.clientX, event.clientY);
     });
+
+    function updateXpWidget(xp) {
+        const xpText = xpWidget.querySelector("span");
+        if (xpText) {
+            xpText.textContent = xp;
+        } else {
+            const newText = document.createElement("span");
+            newText.textContent = xp;
+            xpWidget.appendChild(newText);
+        }
+    }
 
     function showXpPopup(x, y) {
         const xpPopup = document.createElement("div");
